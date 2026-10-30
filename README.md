@@ -3,7 +3,7 @@
 ![mesh-thumb](https://github.com/user-attachments/assets/e84162a7-7e7b-4add-adec-863a9abb4d84)
 
 **Author:** The French Monkey (TFMSTYLE)  
-**Version:** 1.0.0  
+**Version:** 1.0.1  
 
 ---
 
@@ -225,3 +225,21 @@ Higher values produce smoother and denser meshes.
 4. Click **Generate Mesh** to create a new object.  
 5. Modify parameters interactively — the object updates automatically.  
 6. Export or convert to standard mesh data for modeling or rendering.
+
+---
+
+## Install
+
+Needs Blender 4.2 or later. Get the zip from [tfmstyle.com](https://tfmstyle.com), then in Blender open Edit > Preferences > Get Extensions, open the menu at the top right and pick Install from Disk.
+
+To build the zip yourself, run this in the repo folder:
+
+```bash
+blender --command extension build
+```
+
+---
+
+## License
+
+GPL 3.0 or later. See [LICENSE](LICENSE).
