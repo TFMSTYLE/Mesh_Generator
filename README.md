@@ -3,7 +3,7 @@
 ![mesh-thumb](https://github.com/user-attachments/assets/e84162a7-7e7b-4add-adec-863a9abb4d84)
 
 **Author:** The French Monkey (TFMSTYLE)  
-**Version:** 1.0.1  
+**Version:** 1.0.2  
 
 ---
 

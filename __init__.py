@@ -4,7 +4,7 @@
 bl_info = {
     "name": "Mesh",
     "author": "The French Monkey",
-    "version": (1, 0, 1),
+    "version": (1, 0, 2),
     "blender": (4, 2, 0),
     "location": "View3D > Sidebar > Mesh",
     "description": "Generate parametric Meshes",
@@ -15,6 +15,11 @@ bl_info = {
 import bpy
 import bmesh
 from math import sin, cos, pi, copysign, sqrt, radians
+
+try:
+    from . import relay_updater
+except ImportError:  # the Addon Collection has its own updates
+    relay_updater = None
 
 # ----------------------------------------------------------
 # Helpers
@@ -948,6 +953,8 @@ class VIEW3D_PT_mesh_generator(bpy.types.Panel):
     bl_category = "Mesh"
 
     def draw(self, context):
+        if relay_updater:
+            relay_updater.draw(self.layout)
         layout = self.layout
         p = context.scene.meshgen_props
         o = context.object
@@ -1085,11 +1092,15 @@ classes = (
 )
 
 def register():
+    if relay_updater:
+        relay_updater.register("blender-mesh")
     for c in classes:
         bpy.utils.register_class(c)
     bpy.types.Scene.meshgen_props = bpy.props.PointerProperty(type=MeshGenProperties)
 
 def unregister():
+    if relay_updater:
+        relay_updater.unregister()
     for c in reversed(classes):
         bpy.utils.unregister_class(c)
     del bpy.types.Scene.meshgen_props
