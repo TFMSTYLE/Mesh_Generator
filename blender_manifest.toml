@@ -1,7 +1,7 @@
 schema_version = "1.0.0"
 
 id = "tfmstyle_mesh"
-version = "1.0.2"
+version = "1.0.3"
 name = "TFMSTYLE - Mesh"
 tagline = "Generate parametric Meshes"
 maintainer = "The French Monkey"

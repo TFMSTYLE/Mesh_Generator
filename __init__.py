@@ -4,7 +4,7 @@
 bl_info = {
     "name": "Mesh",
     "author": "The French Monkey",
-    "version": (1, 0, 2),
+    "version": (1, 0, 3),
     "blender": (4, 2, 0),
     "location": "View3D > Sidebar > Mesh",
     "description": "Generate parametric Meshes",
